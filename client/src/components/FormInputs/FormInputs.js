@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 
 const FormInputs = (props) => {
-    const {label, input, type, classes, meta: {touched, error}} = props;
+    const {label, input, type, classes, meta: {touched, active, error}} = props;
     const inputClassName = classNames(classes.input, {
-        [classes.valid]: touched && !error,
+        [classes.valid]: active && !error,
         [classes.notValid]: touched && error,
     });
     return (
