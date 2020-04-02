@@ -11,12 +11,6 @@ import Article from "../../components/Article/Article";
 const RegistrationPage = (props) => {
     props.clearError();
 
-    const changeRoute = () => {
-        props.history.replace('/');
-    };
-
-
-
     return (
         <div className={styles.signUpPage}>
             <div className={styles.signUpContainer}>
@@ -28,18 +22,26 @@ const RegistrationPage = (props) => {
                         <Link to='/login' style={{textDecoration: 'none'}}><span>Login</span></Link>
                     </div>
                 </div>
-                <RegistrationForm changeRoute={changeRoute}/>
+
+                <RegistrationForm/>
             </div>
             <div className={styles.footer}>
                 <div className={styles.articlesMainContainer}>
                     <div className={styles.ColumnContainer}>
-                            <Article header={articles.firstColumn.header} article={articles.firstColumn.text} className={styles}/>
-                            <Article header={articles.secondColumn.header} article={articles.secondColumn.text} className={styles}/>
-                            <Article header={articles.thirdColumn.header} article={articles.thirdColumn.text} className={styles}/>
-                            <Article header={articles.fourthColumn.header} article={articles.fourthColumn.text} className={styles}/>
-                            <Article header={articles.fifthColumn.header} article={articles.fifthColumn.text} className={styles}/>
-                            <Article header={articles.sixthColumn.header} article={articles.sixthColumn.text} className={styles}/>
-                            <Article header={articles.seventhColumn.header} article={articles.seventhColumn.text} className={styles}/>
+                        <Article header={articles.firstColumn.header} article={articles.firstColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.secondColumn.header} article={articles.secondColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.thirdColumn.header} article={articles.thirdColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.fourthColumn.header} article={articles.fourthColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.fifthColumn.header} article={articles.fifthColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.sixthColumn.header} article={articles.sixthColumn.text}
+                                 className={styles}/>
+                        <Article header={articles.seventhColumn.header} article={articles.seventhColumn.text}
+                                 className={styles}/>
                     </div>
                 </div>
             </div>
