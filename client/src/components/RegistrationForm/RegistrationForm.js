@@ -2,7 +2,6 @@ import React from 'react';
 import Error from '../Error/Error';
 import {connect} from "react-redux";
 import {authActionRegister, clearAuth} from '../../actions/actionCreator';
-import {Redirect} from 'react-router-dom';
 import styles from './RegistrationForm.module.sass';
 import {Field, reduxForm} from 'redux-form';
 import FormInputs from '../FormInputs/FormInputs';
@@ -20,7 +19,7 @@ class RegistrationForm extends React.Component {
         this.props.authClear();
     }
 
-    clicked = (values) => {
+    clickHandler = (values) => {
         this.props.register({
             firstName: values.firstName,
             lastName: values.lastName,
@@ -53,7 +52,7 @@ class RegistrationForm extends React.Component {
                         We always keep your name and email address private.
                     </h4>
                 </div>
-                <form onSubmit={handleSubmit(this.clicked)}>
+                <form onSubmit={handleSubmit(this.clickHandler)}>
                     <div className={styles.row}>
                         <Field
                             name='firstName'

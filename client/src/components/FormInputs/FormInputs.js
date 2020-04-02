@@ -9,8 +9,7 @@ const FormInputs = (props) => {
     });
     return (
         <div className={classes.container}>
-            <input {...input} placeholder={label} type={type} className={inputClassName}
-            />
+            <input {...input} placeholder={label} type={type} className={inputClassName}/>
             {classes.warning && (touched && (error && <span className={classes.warning}>{error}</span>))}
         </div>
     )
