@@ -22,7 +22,7 @@ const UpdateUserInfoForm = (props) => {
                     component={FormInputs}
                     type='text'
                     label='First Name'
-                    classes={{
+                    className={{
                         container: styles.inputContainer,
                         input: styles.input,
                         warning: styles.error,
@@ -37,7 +37,7 @@ const UpdateUserInfoForm = (props) => {
                     component={FormInputs}
                     type='text'
                     label='LastName'
-                    classes={{
+                    className={{
                         container: styles.inputContainer,
                         input: styles.input,
                         warning: styles.error,
@@ -52,7 +52,7 @@ const UpdateUserInfoForm = (props) => {
                     component={FormInputs}
                     type='text'
                     label='Display Name'
-                    classes={{
+                    className={{
                         container: styles.inputContainer,
                         input: styles.input,
                         warning: styles.error,
@@ -63,7 +63,7 @@ const UpdateUserInfoForm = (props) => {
             <Field
                 name='file'
                 component={ImageUpload}
-                classes={{
+                className={{
                     uploadContainer: styles.imageUploadContainer,
                     inputContainer: styles.uploadInputContainer,
                     imgStyle: styles.imgStyle

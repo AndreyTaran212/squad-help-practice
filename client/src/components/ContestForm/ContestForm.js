@@ -59,7 +59,7 @@ class ContestForm extends React.Component {
                             name='styleName'
                             component={SelectInput}
                             header='Style name'
-                            classes={{
+                            className={{
                                 inputContainer: styles.selectInputContainer,
                                 inputHeader: styles.selectHeader,
                                 selectInput: styles.select
@@ -69,7 +69,7 @@ class ContestForm extends React.Component {
                         <Field
                             name='typeOfName'
                             component={SelectInput}
-                            classes={{
+                            className={{
                                 inputContainer: styles.selectInputContainer,
                                 inputHeader: styles.selectHeader,
                                 selectInput: styles.select
@@ -90,7 +90,7 @@ class ContestForm extends React.Component {
                                 component={FormInputs}
                                 type='text'
                                 label='name of venture'
-                                classes={{
+                                className={{
                                     container: styles.componentInputContainer,
                                     input: styles.input,
                                     warning: styles.warning
@@ -100,7 +100,7 @@ class ContestForm extends React.Component {
                         <Field
                             name='brandStyle'
                             component={SelectInput}
-                            classes={{
+                            className={{
                                 inputContainer: styles.selectInputContainer,
                                 inputHeader: styles.selectHeader,
                                 selectInput: styles.select
@@ -121,7 +121,7 @@ class ContestForm extends React.Component {
                                 component={FormInputs}
                                 type='text'
                                 label='name of venture'
-                                classes={{
+                                className={{
                                     container: styles.componentInputContainer,
                                     input: styles.input,
                                     warning: styles.warning
@@ -131,7 +131,7 @@ class ContestForm extends React.Component {
                         <Field
                             name='typeOfTagline'
                             component={SelectInput}
-                            classes={{
+                            className={{
                                 inputContainer: styles.selectInputContainer,
                                 inputHeader: styles.selectHeader,
                                 selectInput: styles.select
@@ -168,7 +168,7 @@ class ContestForm extends React.Component {
                                             component={FormInputs}
                                             type='text'
                                             label='Title'
-                                            classes={{
+                                            className={{
                                                 container: styles.componentInputContainer,
                                                 input: styles.input,
                                                 warning: styles.warning
@@ -179,7 +179,7 @@ class ContestForm extends React.Component {
                                         <Field
                                             name='industry'
                                             component={SelectInput}
-                                            classes={{
+                                            className={{
                                                 inputContainer: styles.selectInputContainer,
                                                 inputHeader: styles.selectHeader,
                                                 selectInput: styles.select
@@ -196,7 +196,7 @@ class ContestForm extends React.Component {
                                             component={FormTextArea}
                                             type='text'
                                             label='e.g. We`re an online lifestyle brand that provides stylish and high quality apparel to the expert eco-conscious shopper'
-                                            classes={{
+                                            className={{
                                                 container: styles.componentInputContainer,
                                                 inputStyle: styles.textArea,
                                                 warning: styles.warning
@@ -210,7 +210,7 @@ class ContestForm extends React.Component {
                                             component={FormTextArea}
                                             type='text'
                                             label='customers'
-                                            classes={{
+                                            className={{
                                                 container: styles.componentInputContainer,
                                                 inputStyle: styles.textArea,
                                                 warning: styles.warning
@@ -221,7 +221,7 @@ class ContestForm extends React.Component {
                                     <Field
                                         name='file'
                                         component={FieldFileInput}
-                                        classes={{
+                                        className={{
                                             fileUploadContainer: styles.fileUploadContainer,
                                             labelClass: styles.label,
                                             fileNameClass: styles.fileName,

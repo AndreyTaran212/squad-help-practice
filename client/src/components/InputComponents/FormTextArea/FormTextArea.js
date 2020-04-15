@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const FormTextArea = ({label, input, classes, meta: {touched, error}}) => {
-    const {container, inputStyle, notValid, warning} = classes;
+const FormTextArea = ({label, input, className, meta: {touched, error}}) => {
+    const {container, inputStyle, notValid, warning} = className;
     return (
         <div className={container}>
             <textarea {...input} placeholder={label}

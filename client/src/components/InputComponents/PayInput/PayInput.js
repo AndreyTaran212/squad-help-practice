@@ -4,31 +4,31 @@ import InputMask from 'react-input-mask';
 
 
 const PayInput = (props) => {
-    const {label, input: {name}, input, changeFocus, type, classes, meta: {touched, error}, isInputMask, mask} = props;
+    const {label, input: {name}, input, changeFocus, type, className, meta: {touched, error}, isInputMask, mask} = props;
     if (name === 'sum') {
         return (
-            <div className={classes.container}>
+            <div className={className.container}>
                 <input {...input} placeholder={label} type={type}
-                       className={classNames(classes.input, {[classes.notValid]: touched && error})}/>
-                {(touched && error) && <span className={classes.error}>{error}!</span>}
+                       className={classNames(className.input, {[className.notValid]: touched && error})}/>
+                {(touched && error) && <span className={className.error}>{error}!</span>}
             </div>
         )
     } else if (isInputMask) {
         return (
-            <div className={classes.container}>
+            <div className={className.container}>
                 <InputMask mask={mask} maskChar={null} {...input} placeholder={label} type={type}
-                           className={classNames(classes.input, {[classes.notValid]: touched && error})}
+                           className={classNames(className.input, {[className.notValid]: touched && error})}
                            onFocus={() => changeFocus(name)}/>
-                {(touched && error) && <span className={classes.error}>{error}!</span>}
+                {(touched && error) && <span className={className.error}>{error}!</span>}
             </div>
         )
     } else {
         return (
-            <div className={classes.container}>
+            <div className={className.container}>
                 <input {...input} placeholder={label} type={type}
-                       className={classNames(classes.input, {[classes.notValid]: touched && error})}
+                       className={classNames(className.input, {[className.notValid]: touched && error})}
                        onFocus={() => changeFocus(name)}/>
-                {(touched && error) && <span className={classes.error}>{error}!</span>}
+                {(touched && error) && <span className={className.error}>{error}!</span>}
             </div>
         )
     }

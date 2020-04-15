@@ -26,11 +26,11 @@ class SelectInput extends React.Component {
     }
 
     render() {
-        const {input, header, classes} = this.props;
+        const {input, header, className} = this.props;
         return (
-            <div className={classes.inputContainer}>
-                <span className={classes.inputHeader}>{header}</span>
-                <select {...input} className={classes.selectInput}>
+            <div className={className.inputContainer}>
+                <span className={className.inputHeader}>{header}</span>
+                <select {...input} className={className.selectInput}>
                     {this.getOptionsArray()}
                 </select>
             </div>

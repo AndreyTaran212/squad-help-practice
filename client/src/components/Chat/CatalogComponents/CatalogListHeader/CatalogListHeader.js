@@ -32,7 +32,7 @@ const CatalogListHeader = (props) => {
                 <form onSubmit={handleSubmit(changeCatalogName)}>
                     <Field
                         name='catalogName'
-                        classes={{
+                        className={{
                             container: styles.inputContainer,
                             input: styles.input,
                             warning: styles.fieldWarning,

@@ -83,7 +83,7 @@ const RegistrationForm = (props) => {
             <div className={styles.termsOfService}>
                 <Field
                     name='agreeOfTerms'
-                    classes={{
+                    className={{
                         container: styles.termsOfService,
                         warning: styles.fieldWarning
                     }}

@@ -37,7 +37,7 @@ const ChatInput = (props) => {
                     component={FormInputs}
                     type='text'
                     label='message'
-                    classes={{
+                    className= {{
                         container: styles.container,
                         input: styles.input,
                         notValid: styles.notValid

@@ -42,7 +42,7 @@ const PayForm = (props) => {
           <span>Name</span>
           <Field
             name='name'
-            classes={ {
+            className={ {
               container: styles.inputContainer,
               input: styles.input,
               notValid: styles.notValid,
@@ -58,7 +58,7 @@ const PayForm = (props) => {
           <span>Sum</span>
           <Field
             name='sum'
-            classes={ {
+            className={ {
               container: styles.inputContainer,
               input: styles.input,
               notValid: styles.notValid,
@@ -75,7 +75,7 @@ const PayForm = (props) => {
             isInputMask={ true }
             mask='9999 9999 9999 9999 999'
             name='number'
-            classes={ {
+            className={ {
               container: styles.inputContainer,
               input: styles.input,
               notValid: styles.notValid,
@@ -94,7 +94,7 @@ const PayForm = (props) => {
               isInputMask={ true }
               mask='99/99'
               name='expiry'
-              classes={ {
+              className={ {
                 container: styles.inputContainer,
                 input: styles.input,
                 notValid: styles.notValid,
@@ -112,7 +112,7 @@ const PayForm = (props) => {
               isInputMask={ true }
               mask='9999'
               name='cvc'
-              classes={ {
+              className={ {
                 container: styles.inputContainer,
                 input: styles.input,
                 notValid: styles.notValid,

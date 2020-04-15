@@ -41,7 +41,7 @@ const AddToCatalog = (props) => {
                         name='catalogId'
                         component={SelectInput}
                         header='name of catalog'
-                        classes={{
+                        className={{
                             inputContainer: styles.selectInputContainer,
                             inputHeader: styles.selectHeader,
                             selectInput: styles.select

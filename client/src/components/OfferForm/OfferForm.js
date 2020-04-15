@@ -21,7 +21,7 @@ const OfferForm = (props) => {
                 <Field
                     name='offerData'
                     component={ImageUpload}
-                    classes={{
+                    className={{
                         uploadContainer: styles.imageUploadContainer,
                         inputContainer: styles.uploadInputContainer,
                         imgStyle: styles.imgStyle
@@ -32,7 +32,7 @@ const OfferForm = (props) => {
             return (
                 <Field
                     name='offerData'
-                    classes={{
+                    className={{
                         container: styles.inputContainer,
                         input: styles.input,
                         warning: styles.fieldWarning,
