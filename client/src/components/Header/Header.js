@@ -40,6 +40,7 @@ class Header extends React.Component {
                                       style={{textDecoration: 'none'}}><span>Messages</span></Link></li>
                             <li><Link to='http:/www.google.com' style={{textDecoration: 'none'}}><span>Affiliate Dashboard</span></Link>
                             </li>
+                            <li><Link to='/myTransaction' style={{textDecoration: 'none'}}><span>My Transaction</span></Link></li>
                             <li><span onClick={this.logOut}>Logout</span></li>
                         </ul>
                     </div>
