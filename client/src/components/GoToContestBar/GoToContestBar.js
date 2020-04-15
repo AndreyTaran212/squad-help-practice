@@ -6,16 +6,16 @@ const GoToContestBar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.cardBody}>
-                <span className={styles.contentContainer}>
-                    <span className={styles.leftText}>
+                <div className={styles.contentContainer}>
+                    <div className={styles.leftText}>
                         Ready to get started? Launch a contest and start receiving submissions instantly.
-                    </span>
+                    </div>
                     <Link to={'/startContest'}>
-                        <span className={styles.rightText}>
+                        <div className={styles.rightText}>
                         <i className={'far fa-lightbulb mr-1'}/>Start A Contest
-                    </span>
+                    </div>
                     </Link>
-                </span>
+                </div>
             </div>
         </div>
     );

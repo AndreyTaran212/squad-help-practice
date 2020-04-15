@@ -15,7 +15,7 @@ const FieldFileInput = (props) => {
         onChange(file);
     };
 
-    const {fileUploadContainer, labelClass, fileNameClass, fileInput} = props.classes;
+    const {fileUploadContainer, labelClass, fileNameClass, fileInput} = props.className;
     return (
         <div className={fileUploadContainer}>
             <label htmlFor="fileInput" className={labelClass}>Choose file</label>
