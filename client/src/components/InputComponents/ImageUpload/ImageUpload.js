@@ -19,7 +19,7 @@ const ImageUpload = (props) => {
         }
     };
     const {input: {value}} = props;
-    const {uploadContainer, inputContainer, imgStyle} = props.classes;
+    const {uploadContainer, inputContainer, imgStyle} = props.className;
     return (
         <div className={uploadContainer}>
             <div className={inputContainer}>
