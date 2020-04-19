@@ -128,16 +128,13 @@ class ContestPage extends React.Component {
                         <span onClick={() => changeContestViewMode(true)}
                               className={classNames(styles.btn, {[styles.activeBtn]: isBrief})}>Brief</span>
                                         {
-                                            role === 'customer' &&
-                                            offers.length !==0 &&
-                                            <span onClick={() => changeContestViewMode(false)}
-                                                  className={classNames(styles.btn, {[styles.activeBtn]: !isBrief})}>Offer</span>
-
-                                        }
-                                        {
-                                            role === 'creator' &&
-                                            <span onClick={() => changeContestViewMode(false)}
-                                                  className={classNames(styles.btn, {[styles.activeBtn]: !isBrief})}>Offer</span>
+                                            role === 'customer' ?
+                                                offers.length !== 0 &&
+                                                <span onClick={() => changeContestViewMode(false)}
+                                                      className={classNames(styles.btn, {[styles.activeBtn]: !isBrief})}>Offer</span>
+                                                :
+                                                <span onClick={() => changeContestViewMode(false)}
+                                                      className={classNames(styles.btn, {[styles.activeBtn]: !isBrief})}>Offer</span>
                                         }
                                     </div>
                                     {
