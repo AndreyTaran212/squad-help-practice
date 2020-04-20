@@ -13,6 +13,8 @@ module.exports.offersMiddleware = async (req, res, next) => {
                 [db.Sequelize.Op.gte]: new Date(req.body.time)
             }
         }
+        req.body.option = option;
+        next();
     } catch (e) {
         next(new ServerError());
     }
