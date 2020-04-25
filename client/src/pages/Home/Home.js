@@ -54,6 +54,9 @@ const Home = (props) => {
                     </div>
                     <div className={styles.container__description}>
                         <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
+                        <div className={styles.button}>
+                            <Link className={styles.button__link} to="/howItWorks">LEARN HOW SQUADHELPS WORKS</Link>
+                        </div>
                         <div className={styles.cardContainer}>
                             <div className={styles.card}>
                                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}more-benifits-world-icon.png`} alt="globe"/>
