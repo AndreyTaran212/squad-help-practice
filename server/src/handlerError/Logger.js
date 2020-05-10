@@ -8,8 +8,7 @@ export default function (err) {
         code: err.code,
         stackTrace: err.stack,
     };
-    fs.appendFile('error.txt', JSON.stringify(error), (err) => {
+    fs.appendFile('error.txt', JSON.stringify(error)+'\n', (err) => {
         if (err) throw err;
-        console.log('The "data to append" was appended to file!');
     })
 };
