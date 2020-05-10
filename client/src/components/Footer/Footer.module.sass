@@ -52,9 +52,25 @@
   .footerTop
     width: 100%
     background-color: #2B3030
-    padding: 80px 0
+    padding: 86px 0
     color: white
-    font-family: 'Raleway',sans-serif
+    font-weight: 300
+    @media (max-width: 790px)
+      display: none
+    & > div:first-child
+      font-family: 'Raleway', sans-serif
+      padding-bottom: 43px
+
+    & > div:nth-child(2)
+      font-family: 'Lato', sans-serif
+
+    & > div:nth-child(3)
+      font-family: 'Lato', sans-serif
+      @media (max-width: 1200px)
+        & > div
+          max-width: 25% !important
+          min-width: 25%
+
 
     div
       margin: 0 auto
@@ -63,6 +79,8 @@
       align-items: baseline
       flex-wrap: wrap
       justify-content: space-around
+
+
       @media (min-width: 768px)
         width: 750px
 
@@ -71,6 +89,21 @@
 
       @media (min-width: 1200px)
         width: 1170px
+      @media (max-width: 1200px)
+        margin: 0
+
+      h1
+        font-size: 20px
+        padding: 0 0 30px 0
+        border-bottom: 1px solid #555959
+        margin: 0 auto 20px 15px
+        width: 100%
+
+      a
+        padding-bottom: 7px
+
+      a:hover
+        color: rgb(249, 118, 75)
 
       div
         display: flex
@@ -78,7 +111,17 @@
         min-width: 250px
         max-width: 300px
         flex-direction: column
-        padding: 15px
+        padding: 0 15px
+        @media (max-width: 1200px)
+          min-width: 50%
+          padding: 0 15px 40px
+          margin: 0
+
+        div
+          padding: 0
+          @media (max-width: 1200px)
+            padding: 0 0 40px
+
 
         h4
           font-size: 16px
@@ -86,13 +129,116 @@
           display: block
           padding-bottom: 20px
           margin-bottom: 0
+          margin-top: 0
+          line-height: 30px
 
         a
           padding-bottom: 7px
           font-size: 14px
           text-decoration: none
-          color: #767979
+          color: #838787
 
         a:hover
           color: rgb(249, 118, 75)
+
+.footerBot
+  background-color: #232828
+  padding: 40px 0 25px
+
+.footerRow
+  display: flex
+  flex-direction: row
+  justify-content: center
+  width: 1170px
+  margin: 0 auto
+  @media(max-width: 1200px)
+    width: 100%
+  @media (max-width: 790px)
+    width: 750px
+    padding: 0 15px
+    flex-direction: column-reverse
+    align-items: center
+  @media (max-width: 480px)
+    width: 100%
+
+  div
+    width: 50%
+    display: flex
+    flex-direction: row
+    @media (max-width: 790px)
+      width: 100%
+
+    &:first-child
+      justify-content: flex-start
+      padding: 4px 15px 0
+      @media (max-width: 790px)
+        justify-content: center
+        width: 70%
+        flex-direction: column
+        margin: 0 auto
+        img
+          margin: 12px auto
+          height: 44px
+          width: 138px
+        div
+          border: none
+          margin: 0 auto 15px
+          padding: 10px 0 10px 25px !important
+
+
+    &:nth-child(2)
+      justify-content: flex-end
+      padding: 0 15px
+      @media (max-width: 790px)
+        justify-content: center
+        margin-bottom: 25px
+
+    div
+      display: flex
+      justify-content: flex-start !important
+      padding: 10px 0 10px 30px !important
+      margin: 0 0 5px 33px
+      border-left: 1px solid #3d4141
+      font-size: 14px
+      color: #666868
+      font-family: 'Lato', sans-serif
+      font-weight: 300
+      line-height: 1
+      max-height: 14px
+      cursor: pointer
+
+    a
+      height: 40px
+      width: 40px
+      border-radius: 50%
+      border: 1px solid white
+      margin: 0 5px 0 15px
+      background-color: #565959
+      display: flex
+      justify-content: center
+      align-items: center
+
+.footerIcon
+  height: 25px
+  width: 25px
+  color: #28d2d0
+
+.footerLink
+  padding-left: 15px
+  font-size: 14px
+  text-decoration: none
+  color: #565959
+  margin-top: 20px !important
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  width: 1155px
+  @media (max-width: 1200px)
+    width: 100%
+
+  a
+    margin-right: auto
+    color: #838787
+    text-decoration: none
+    font-family: 'Lato', sans-serif
 
