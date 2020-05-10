@@ -1,0 +1,409 @@
+@import "src/style/breakpoints"
+@import "src/style/fonts"
+@import "src/style/textWrapper"
+
+*
+  box-sizing: border-box
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 1170px
+  @extend .wrapperPadding
+  margin: 0 auto
+  color: #333333
+  @media (max-width: 1200px)
+    width: 100%
+
+.row
+  width: 100%
+  margin: 0 -15px 50px
+
+.videoWrapper
+  box-sizing: border-box
+  width: 50%
+  min-width: 585px
+  min-height: 50px
+  padding-right: 15px
+  @media (max-width: 1200px)
+    min-width: 375px
+  @media (max-width: 480px)
+    width: 100%
+    min-width: 100px
+    height: 152px
+    max-height: 152px
+
+.header
+  display: flex
+  flex-direction: row
+  justify-content: center
+  height: 450px
+  padding: 80px 0
+  width: 100%
+  box-sizing: border-box
+  @media (max-width: 480px)
+    flex-direction: column
+    height: 550px
+    justify-content: flex-start
+    padding: 69px 0 25px
+
+  h2
+    @extend .ralewayBold
+    font-size: 36px
+    line-height: 40px
+    padding-bottom: 25px
+    margin: 0 0 20px
+    -webkit-font-smoothing: antialiased
+    @media (max-width: 480px)
+      font-size: 25px
+      padding: 20px 0 0
+      line-height: 25px
+
+
+  p
+    @extend .ralewayRegular
+    font-size: 16px
+    line-height: 25px
+    margin: 0
+    -webkit-font-smoothing: antialiased
+    @media (max-width: 480px)
+      font-size: 14px
+
+.headerTextWrapper
+  padding-left: 15px
+  width: 50%
+  min-height: 1px
+  max-height: 450px
+  @media (max-width: 480px)
+    width: 100%
+    padding: 0
+
+.mainStepContainer
+  display: flex
+  flex-direction: row
+  justify-content: center
+  margin: 0 -15px 15px -15px
+  padding: 25px 0
+  @media (max-width: 790px)
+    flex-wrap: wrap
+
+.stepsCircle
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 90px
+  width: 90px
+  border-radius: 50%
+  background-color: #EBEBEB
+  text-align: center
+  color: #000000
+  @extend .ralewayBold
+  font-size: 30px
+  line-height: 90px
+  cursor: pointer
+  &:hover
+    background-color: #28D2D0
+    color: white
+
+
+.firstCircle
+  background-color: #28D2D0
+  color: white
+
+.stepsTextWrapper
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 195px
+  @extend .wrapperPadding
+  @media (max-width: 790px)
+    width: 50%
+    flex-wrap: wrap
+    padding-bottom: 30px
+    margin-right: auto
+  @media (max-width: 480px)
+    width: 100%
+    flex-wrap: nowrap
+
+.stepsContainer
+  display: flex
+  flex-direction: column
+  @extend .wrapperPadding
+  width: 100%
+
+  h2
+    @extend .ralewayBold
+    font-size: 36px
+    line-height: 40px
+    padding: 50px 0
+    margin: 0 0 20px
+    -webkit-font-smoothing: antialiased
+    text-align: center
+
+  h4
+    @extend .ralewayBold
+    font-weight: 900
+    font-size: 16px
+    line-height: 1.1
+    padding: 20px 0
+    margin: 0 0 20px
+    text-align: center
+    -webkit-font-smoothing: antialiased
+
+  p
+    @extend .ralewayRegular
+    font-size: 14px
+    line-height: 18px
+    margin: 0
+    -webkit-font-smoothing: antialiased
+    text-align: center
+
+.contestBarWrapper
+  width: 100%
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+.contestBar
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 35px 0
+  margin: 15px -68px 45px -68px
+  background-color: #28d2d0
+  width: 100vw
+  max-width: 1276px
+
+.contestLink
+  padding: 18px 0
+  width: 235px
+  border: 2px solid white
+  border-radius: 5px
+  text-align: center
+  vertical-align: middle
+  a
+    text-decoration: none
+  span
+    color: white
+    @extend .ralewayBold
+    font-size: 20px
+    padding: 18px 0
+
+.howItWorkContainer
+  display: flex
+  flex-direction: column
+  margin: 0 -15px
+  width: 1170px
+  @media (max-width: 1200px)
+    width: 100%
+  @media (max-width: 480px)
+    margin: 0
+.generalQuestion
+  display: flex
+  flex-direction: row
+  padding: 20px 10px
+  border-bottom: 1px solid #e1e1e1
+  @media (max-width: 480px)
+    width: 100%
+    padding: 20px 0 20px 0
+
+.generalQuestionIcon
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  border: 2px solid #28d2d0
+  color: #28d2d0
+  @extend .ralewayRegular
+  font-size: 36px
+
+.generalQuestionText
+  padding: 10px 15px
+  width: 100%
+  @media (max-width: 480px)
+    padding: 10px 0 10px 10px
+    width: auto
+
+  h5
+    padding-bottom: 10px
+    margin: 0 0 20px 0
+    @extend .ralewayBold
+    font-size: 30px
+    @media (max-width: 480px)
+      font-size: 22px
+      line-height: 1.1
+
+
+.questionWrapper
+  display: flex
+  flex-direction: column
+  width: 1170px
+  padding: 0 10px
+  @media (max-width: 1200px)
+    width: 100%
+
+.questionTextWrapper
+  padding: 15px
+  margin: 10px 0 0
+  &:nth-child(2n)
+    background-color: #fafafa
+  h4
+    margin: 0 0 20px
+    padding: 15px 0
+    @extend .ralewayBold
+    font-size: 18px
+    line-height: 18px
+  p
+    margin: 15px 0 0
+    @extend .ralewayRegular
+    font-size: 16px
+    line-height: 20px
+  a
+    color: #28d2d0
+    @extend .ralewayRegular
+    cursor: pointer
+  ul
+    margin: 20px 0 0
+    padding: 0 25px
+  li
+    list-style-type: none
+    color: #28d2d0
+    margin: 5px 0
+    @extend .ralewayRegular
+    font-size: 14px
+    line-height: 14px
+    cursor: pointer
+
+.iconScroll
+  display: none !important
+
+.getItTouch
+  width: 100%
+  padding: 35px 0
+  background-color: #455a89
+  margin-top: 10px
+
+.getItTouchContainer
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 1170px
+  box-sizing: border-box
+  @extend .wrapperPadding
+  margin: 0 auto
+  @media (max-width: 1200px)
+    width: 100%
+  @media (max-width: 770px)
+    flex-direction: column
+    align-items: center
+
+.getItTouchWrapper
+  display: flex
+  flex-direction: row
+  width: 75%
+  @media (max-width: 770px)
+    width: 100%
+
+
+.getItTouchIcon
+  width: 16.6666667%
+  padding: 0 15px 0 15px
+  margin: 0
+  div
+    height: 100px
+    width: 100px
+    border-radius: 50%
+    background-color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0
+  @media (max-width: 480px)
+    display: none
+
+.iconTouch
+  color: #455a89
+  font-size: 50px
+  background-color: white
+
+.getItTouchText
+  width: 83.33333333%
+  float: left
+  line-height: 1
+  box-sizing: border-box
+  @extend .wrapperPadding
+  @media (max-width: 480px)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+  h1
+    @extend .ralewayBold
+    font-size: 25px
+    line-height: 30px
+    color: white
+    margin: 0 0 20px
+    padding: 12px 0 20px
+
+  p
+    @extend .ralewayRegular
+    font-size: 20px
+    color: white
+    margin: 0
+    line-height: 1
+    a
+      color: #f18762
+      font-weight: 500
+      cursor: pointer
+      text-decoration: none
+
+
+.getItTouchButton
+  width: 25%
+  display: flex
+  justify-content: flex-end
+  padding: 8px 0 8px 15px
+  margin: 0
+  @media (max-width: 790px)
+    width: 100%
+    justify-content: center
+    padding-top: 25px
+  div
+    height: min-content
+    font-size: 20px
+    border: 2px solid white
+    border-radius: 5px
+    @extend .ralewayBold
+    color: white
+    padding: 22px 40px
+    line-height: 1
+    margin: 0
+    cursor: pointer
+
+
+
+.icon
+  display: flex
+  justify-content: center
+  align-content: center
+  position: fixed
+  bottom: 80px
+  right: 10px
+  height: 33px
+  width: 33px
+  border-radius: 50%
+  vertical-align: center
+  text-align: center
+  background-color: #f18762
+  opacity: 0.5
+  cursor: pointer
+  &:hover
+    opacity: 1
+  i
+    margin: auto
+    color: white
