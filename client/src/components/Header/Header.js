@@ -195,7 +195,7 @@ class Header extends React.Component {
                                                     className={styles.btn}>LOGIN
                                                 </div>
                                             </Link>
-                                            <div> / </div>
+                                            <div> /</div>
                                             <Link to='/registration' style={{textDecoration: 'none'}}>
                                                 <div
                                                     className={styles.btn}>SIGN UP
