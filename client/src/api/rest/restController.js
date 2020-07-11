@@ -24,26 +24,27 @@ export const deleteCatalog = (data) => http.post('deleteCatalog', data);
 export const removeChatFromCatalog = (data) => http.post('removeChatFromCatalog', data);
 export const changeCatalogName = (data) => http.post('updateNameCatalog', data);
 export const getCustomersContests = (data) => {
-    return http.post('getCustomersContests', {limit: data.limit, offset: data.offset}, {
-        headers: {
-            status: data.contestStatus
-        }
-    });
+  return http.post('getCustomersContests', { limit: data.limit, offset: data.offset }, {
+    headers: {
+      status: data.contestStatus,
+    },
+  });
 };
 
-export const getActiveContests = ({offset, limit, typeIndex, contestId, industry, awardSort, ownEntries}) => {
-    return http.post('getAllContests', {offset, limit, typeIndex, contestId, industry, awardSort, ownEntries})
+export const getActiveContests = ({ offset, limit, typeIndex, contestId, industry, awardSort, ownEntries }) => {
+  return http.post('getAllContests', { offset, limit, typeIndex, contestId, industry, awardSort, ownEntries });
 };
 
 export const getContestById = (data) => {
-    return http.get('getContestById', {
-        headers: {
-            contestId: data.contestId
-        }
-    });
+  return http.get('getContestById', {
+    headers: {
+      contestId: data.contestId,
+    },
+  });
 };
 
-
+export const updatePassword = ({ token }) => http.post('successRecover', token);
+export const recoverPassword = ({ data }) => http.post('recoverPassword', data);
 
 
 
