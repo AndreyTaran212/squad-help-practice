@@ -110,24 +110,24 @@ module.exports.payment = async (req, res, next) => {
   try {
     transaction = await db.sequelize.transaction();
     await bankQueries.updateBankBalance({
-        balance: db.sequelize.literal(`
+      balance: db.sequelize.literal(`
                 CASE
             WHEN "cardNumber"='${req.body.number.replace(/ /g,
-          '')}' AND "cvc"='${req.body.cvc}' AND "expiry"='${req.body.expiry}'
+    '')}' AND "cvc"='${req.body.cvc}' AND "expiry"='${req.body.expiry}'
                 THEN "balance"-${req.body.price}
             WHEN "cardNumber"='${CONSTANTS.SQUADHELP_BANK_NUMBER}' AND "cvc"='${CONSTANTS.SQUADHELP_BANK_CVC}' AND "expiry"='${CONSTANTS.SQUADHELP_BANK_EXPIRY}'
                 THEN "balance"+${req.body.price} END
         `),
+    },
+    {
+      cardNumber: {
+        [db.sequelize.Op.in]: [
+          CONSTANTS.SQUADHELP_BANK_NUMBER,
+          req.body.number.replace(/ /g, ''),
+        ],
       },
-      {
-        cardNumber: {
-          [db.sequelize.Op.in]: [
-            CONSTANTS.SQUADHELP_BANK_NUMBER,
-            req.body.number.replace(/ /g, ''),
-          ],
-        },
-      },
-      transaction);
+    },
+    transaction);
     const orderId = uuid();
     req.body.contests.forEach((contest, index) => {
       const prize = index === req.body.contests.length - 1 ? Math.ceil(
@@ -181,24 +181,24 @@ module.exports.cashout = async (req, res, next) => {
       { balance: db.sequelize.literal('balance - ' + req.body.sum) },
       req.tokenData.userId, transaction);
     await bankQueries.updateBankBalance({
-        balance: db.sequelize.literal(`CASE 
+      balance: db.sequelize.literal(`CASE 
                 WHEN "cardNumber"='${req.body.number.replace(/ /g,
-          '')}' AND "expiry"='${req.body.expiry}' AND "cvc"='${req.body.cvc}'
+    '')}' AND "expiry"='${req.body.expiry}' AND "cvc"='${req.body.cvc}'
                     THEN "balance"+${req.body.sum}
                 WHEN "cardNumber"='${CONSTANTS.SQUADHELP_BANK_NUMBER}' AND "expiry"='${CONSTANTS.SQUADHELP_BANK_EXPIRY}' AND "cvc"='${CONSTANTS.SQUADHELP_BANK_CVC}'
                     THEN "balance"-${req.body.sum}
                  END
                 `),
+    },
+    {
+      cardNumber: {
+        [db.sequelize.Op.in]: [
+          CONSTANTS.SQUADHELP_BANK_NUMBER,
+          req.body.number.replace(/ /g, ''),
+        ],
       },
-      {
-        cardNumber: {
-          [db.sequelize.Op.in]: [
-            CONSTANTS.SQUADHELP_BANK_NUMBER,
-            req.body.number.replace(/ /g, ''),
-          ],
-        },
-      },
-      transaction);
+    },
+    transaction);
     transaction.commit();
     res.send({ balance: updatedUser.balance });
   } catch (err) {
@@ -213,9 +213,7 @@ module.exports.initRecoverPassword = async (req, res, next) => {
   try {
     transaction = await db.sequelize.transaction();
     const user = await userQueries.findUser({ email: req.body.email });
-    console.log(user);
     const { recoverPassToken } = req;
-    console.log(recoverPassToken);
     const name = user.firstName;
     const from = 'tarangad313@yahoo.com';
     const to = user.email;
@@ -230,8 +228,8 @@ module.exports.initRecoverPassword = async (req, res, next) => {
         },
       }));
       const mailOptions = {
-        from: from,
-        to: to,
+        from,
+        to,
         subject: name,
         text: message,
       };
