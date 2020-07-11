@@ -20,6 +20,7 @@ import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import PaymentHistory from './pages/PaymetnHistory/PaymentHistory';
 import HowItWorksPage from './pages/HowItWorksPage/HowItWorksPage';
+import RecoverPassword from './pages/RecoverPassword/RecoverPassword';
 
 
 
@@ -64,6 +65,7 @@ class App extends Component {
                     <Route exact path='/account' component={PrivateHoc(UserProfile)}/>
                     <Route exact path='/myTransaction' component={PrivateHoc(PaymentHistory)}/>
                     <Route exact path='/howItWorks' component={HowItWorksPage}/>
+                    <Route exact path='/recoverPassword' component={(RecoverPassword)}/>
                     <Route component={NotFound}/>
                 </Switch>
                 <ChatContainer/>
