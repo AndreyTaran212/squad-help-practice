@@ -25,6 +25,9 @@ const LoginPage = ({error, authClear, loginUser, ...restProps}) => {
                     <h2>LOGIN TO YOUR ACCOUNT</h2>
                     {error && <Error data={error.data} status={error.status} clearError={clearFields}/>}
                     <LoginForm onSubmit={handleSubmit}/>
+                    <Link to='/recoverPassword'>
+                        <h5>Forgot your password?</h5>
+                    </Link>
 
                 </div>
             </div>
