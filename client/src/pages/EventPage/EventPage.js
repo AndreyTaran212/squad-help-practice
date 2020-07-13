@@ -28,6 +28,7 @@ function EventPage(props) {
             }
         });
     };
+    console.log('hi');
 
     const getTimer = () => {
         const allTimer = [];
