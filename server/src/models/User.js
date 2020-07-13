@@ -73,10 +73,10 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Offer, { foreignKey: 'user_id', targetKey: 'id' });
   };
 
-  User.associate = function (models) {
+/*  User.associate = function (models) {
     User.hasMany(models.RefreshToken,
       { foreignKey: 'user_id', targetKey: 'id' });
-  };
+  };*/
 
   return User;
 };

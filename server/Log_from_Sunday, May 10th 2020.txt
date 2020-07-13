@@ -1,5 +1,0 @@
-{"message":"user with this data didn`t exist","code":404,"time":"1589142376995"}
-{"message":"need token","code":408,"time":"1589142828507"}
-{"message":"need token","code":408,"time":"1589142831570"}
-{"message":"need token","code":408,"time":"1589142831575"}
-{"message":"need token","code":408,"time":"1589143200110"}
