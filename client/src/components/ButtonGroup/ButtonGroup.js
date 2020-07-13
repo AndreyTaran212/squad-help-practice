@@ -1,0 +1,57 @@
+import React, { useState } from 'react';
+import styles from './ButtonGroup.module.sass';
+
+const buttons = [
+    {
+        answer: 'Yes',
+        description: 'The Domain should exactly match the name'
+    },
+    {
+        answer: 'Yes',
+        description: 'But minor variations are allowed (Recommended)'
+    },
+    {
+        answer: 'No',
+        description: 'I am only looking for a name, not a Domain'
+    },
+];
+
+const ButtonGroup = () => {
+    const [selectIndex, setIndex] = useState(0);
+
+    const selectItem = (item) => {
+        setIndex(item)
+    };
+
+    const getButtons = () => {
+        const btnArray = [];
+        buttons.forEach((item, index) => {
+            const classNameContainer = index === selectIndex ? styles.container + ' ' + styles.selectedContainer : styles.container;
+            const classNameAnswer = index === selectIndex ? styles.answer + ' ' + styles.selected : styles.answer;
+            btnArray.push(
+                <div key={index} className={classNameContainer} tabIndex='0' onClick={() => selectItem(index)}>
+                    <div className={classNameAnswer}>{item.answer}</div>
+                    <h5 className={styles.description}>{item.description}</h5>
+                </div>
+            )
+        });
+        return btnArray;
+    };
+
+
+    return (
+        <div className={styles.mainContainer}>
+            <div className={styles.header}>
+                <div className={styles.title}>Do you want a matching domain (.com URL) with your name?</div>
+                <div className={styles.headerDescription}>If you want a matching domain, our platform will only accept
+                    those name suggestions where the domain is available. (Recommended)
+                </div>
+            </div>
+            <div className={styles.wrapper}>
+                {getButtons()}
+            </div>
+        </div>
+    );
+};
+
+export default ButtonGroup;
